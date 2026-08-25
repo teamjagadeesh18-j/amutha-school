@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -57,9 +58,9 @@ export default function HeroGeometric({
           📍 {badge}
         </span>
         <MaskTextReveal text={title1} className="text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#0f172a] tracking-tight leading-[1.15] font-heading" direction="bottom-to-top" />
-        <p className="text-base sm:text-lg text-[#475569] leading-relaxed font-body max-w-2xl mx-auto">
+        <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base sm:text-lg text-[#475569] leading-relaxed font-body max-w-2xl mx-auto">
           {description}
-        </p>
+        </TextEffect>
         <div className="pt-4 flex justify-center gap-4 font-body">
           <MovingGradientButton
             label="Apply Now"

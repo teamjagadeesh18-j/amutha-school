@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 import React, { useState } from "react";
 
 export default function CssImageStacking() {
@@ -17,12 +18,12 @@ export default function CssImageStacking() {
         <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-100 text-indigo-800 border border-indigo-300 font-body">
           EDITORIAL STAGE SHOWCASE
         </span>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-[#1e1b4b] mt-4 font-heading leading-tight">
+        <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-3xl sm:text-5xl font-extrabold text-[#1e1b4b] mt-4 font-heading leading-tight">
           Explore Life at Amutha School
-        </h2>
-        <p className="text-indigo-900/80 text-base sm:text-lg mt-3 font-body">
+        </TextEffect>
+        <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-indigo-900/80 text-base sm:text-lg mt-3 font-body">
           A happy place to learn, play, and grow in Thiruninravur.
-        </p>
+        </TextEffect>
       </div>
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8 items-center">
@@ -39,8 +40,8 @@ export default function CssImageStacking() {
             <span className="text-xs font-bold text-indigo-700 uppercase tracking-widest font-body">
               ✦ {items[active].category}
             </span>
-            <h3 className="text-2xl font-bold text-[#1e1b4b] font-heading mt-0.5">{items[active].title}</h3>
-            <p className="text-xs text-indigo-900/80 font-body mt-1">{items[active].text}</p>
+            <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl font-bold text-[#1e1b4b] font-heading mt-0.5">{items[active].title}</TextEffect>
+            <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-xs text-indigo-900/80 font-body mt-1">{items[active].text}</TextEffect>
           </div>
         </div>
 
@@ -53,7 +54,7 @@ export default function CssImageStacking() {
               className={`cursor-pointer p-4 rounded-2xl transition-all duration-300 ${active === idx ? "bg-white text-[#1e1b4b] shadow-md border border-indigo-300 translate-x-2" : "bg-white/40 text-indigo-900/70 hover:bg-white/80"}`}
             >
               <span className="text-[10px] font-bold text-indigo-700 uppercase tracking-widest font-body">0{idx + 1}. {item.category}</span>
-              <h4 className="text-sm font-bold font-heading">{item.title}</h4>
+              <TextEffect as="h4" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-sm font-bold font-heading">{item.title}</TextEffect>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 "use client";
+import { TextEffect } from '@/components/core/text-effect';
 
 import React from "react";
 import { LazyMotion, domAnimation, m } from "framer-motion";
@@ -34,8 +35,8 @@ const Card = ({ number, title, description, colorTheme = "blue", rotate, colors:
         <Pin className={`w-5 h-5 ${textColor} z-20 mb-2 mx-auto`} />
         <div className={`${bgColor} border ${borderColor} rounded-[12px] p-3 h-full flex flex-col relative overflow-hidden`}>
           <span className={`${textColor} text-2xl font-bold mb-1.5`}>{number}</span>
-          <h3 className="text-base font-semibold text-neutral-800 dark:text-neutral-100 leading-tight mb-1">{title}</h3>
-          <p className="text-neutral-500 dark:text-neutral-400 text-xs tracking-tight leading-snug">{description}</p>
+          <TextEffect as="h3" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-base font-semibold text-neutral-800 dark:text-neutral-100 leading-tight mb-1">{title}</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-neutral-500 dark:text-neutral-400 text-xs tracking-tight leading-snug">{description}</TextEffect>
         </div>
       </div>
     </div>
@@ -82,8 +83,8 @@ export default function HowItWorks({
           style={{ backgroundImage: "linear-gradient(#000 1px, transparent 1px)", backgroundSize: "100% 32px" }}
         />
         <div className="max-w-2xl mx-auto text-center mb-6 relative z-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">{title}</h2>
-          <p className="text-neutral-500 dark:text-neutral-400 mt-1.5 text-sm">{subtitle}</p>
+          <TextEffect as="h2" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white">{title}</TextEffect>
+          <TextEffect as="p" preset="fade-in-blur" speedReveal={1.1} speedSegment={0.3} className="text-neutral-500 dark:text-neutral-400 mt-1.5 text-sm">{subtitle}</TextEffect>
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">
