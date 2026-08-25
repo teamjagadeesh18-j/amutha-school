@@ -55,12 +55,11 @@ export function SpatialHeader() {
         {/* Desktop CTA & Mobile Menu Toggle Button */}
         <div className="flex items-center gap-2 shrink-0">
           <div className="hidden sm:block">
-            <OrbitBorderButton
+            <MovingGradientButton
               label="Apply Now"
               link="/apply"
               padding="7px 16px 7px 16px"
               colors={{ fill: "#2563eb", textColor: "#ffffff" }}
-              stroke={{ color: "#7a8aff", size: 30, speed: 50 }}
             />
           </div>
 
