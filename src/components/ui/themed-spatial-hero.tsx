@@ -20,16 +20,16 @@ export function AnnouncementBar() {
 export function SpatialHeader() {
   return (
     <header className="sticky top-0 z-50 bg-[#f7f8f9]/90 backdrop-blur-md border-b border-[#e2e8f0] font-body">
-      <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between text-sm text-[#0f172a]">
-        <a href="/" className="hover:opacity-90 transition-opacity"><div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-[#5e6ad2] text-white flex items-center justify-center font-bold font-heading shadow-sm">
+      <div className="max-w-[1200px] mx-auto px-3 sm:px-6 min-h-[60px] sm:h-16 flex items-center justify-between gap-2 text-sm text-[#0f172a]">
+        <a href="/" className="hover:opacity-90 transition-opacity min-w-0 shrink"><div className="flex items-center gap-2.5 min-w-0">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#5e6ad2] text-white flex items-center justify-center font-bold font-heading shadow-sm shrink-0">
             A
           </div>
-          <div>
-            <span className="font-bold text-base text-[#0f172a] font-heading tracking-tight block">
+          <div className="min-w-0">
+            <span className="font-bold text-xs sm:text-base text-[#0f172a] font-heading tracking-tight block truncate max-w-[160px] xs:max-w-[240px] sm:max-w-none">
               Amutha Matriculation School
             </span>
-            <span className="text-[11px] text-[#475569] block -mt-1 font-medium">Matriculation Campus</span>
+            <span className="text-[10px] sm:text-[11px] text-[#475569] block -mt-0.5 font-medium truncate">Matriculation Campus</span>
           </div>
         </div></a>
 
@@ -46,7 +46,7 @@ export function SpatialHeader() {
           <MovingGradientButton
             label="Apply Now"
             link="/apply"
-            padding="8px 20px 8px 20px"
+            padding="6px 14px 6px 14px"
             font={{ fontSize: 14, fontWeight: 700 }}
             colors={{ fill: "#5e6ad2", hoverFill: "#4b57be", textColor: "#ffffff", hoverTextColor: "#ffffff" }}
             stroke={{ color: "#838ee5", headColor: "#ffffff", count: 2, speed: 30, movement: "step" }}
